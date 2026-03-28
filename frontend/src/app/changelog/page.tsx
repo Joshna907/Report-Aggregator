@@ -27,7 +27,7 @@ export default function ChangelogPage() {
         if (res.data && res.data.id) {
           return axios.get(`${API_BASE}/changelog/${res.data.id}`);
         }
-        return { data: [] };
+        return { data: [] } as any;
       })
       .then(res => {
         setLogs(res.data || []);
