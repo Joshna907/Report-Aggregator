@@ -44,7 +44,7 @@ func Merge(reports []*model.ParsedReport) (*model.MergeResult, error) {
 			// Identity Resolution: PURL matching takes precedence (canonical identity)
 			if comp.PURL != "" {
 				if idx, ok := purlIndex[strings.ToLower(comp.PURL)]; ok {
-					existingIdx = idx
+					matchIndex = idx
 				}
 			}
 
@@ -60,11 +60,11 @@ func Merge(reports []*model.ParsedReport) (*model.MergeResult, error) {
 			}
 
 			// Content-based resolution: Match via cryptographic hashes
-			if existingIdx == -1 {
+			if matchIndex == -1 {
 				for _, hash := range comp.Hashes {
 					hashKey := strings.ToLower(hash.Algorithm + ":" + hash.Value)
 					if idx, ok := hashIndex[hashKey]; ok {
-						existingIdx = idx
+						matchIndex = idx
 						break
 					}
 				}
