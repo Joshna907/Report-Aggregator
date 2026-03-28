@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-foss-red: #c12127;
+  --color-foss-blue: #004481;
+  --color-foss-bg: #f8fafc;
+  --color-foss-sidebar: #ffffff;
+  --color-foss-border: #e2e8f0;
+  --color-foss-table-header: #f1f5f9;
+}
+
+body {
+  background-color: var(--color-foss-bg);
+  color: #334155;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--color-foss-blue);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+}
