@@ -1,0 +1,23 @@
+# IDE
+.vscode/
+.idea/
+
+# Backend
+backend/aggregator.db
+backend/aggregator.db-journal
+backend/report-aggregator.exe
+backend/report-aggregator
+backend/vendor/
+
+# Frontend
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/next-env.d.ts
+frontend/.env.local
+frontend/.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
