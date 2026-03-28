@@ -20,13 +20,15 @@ func main() {
 		log.Fatalf("Failed to initialize database: %v", err)
 	}
 
+	srv := api.NewServer(database)
+
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
 	}
 
 	log.Printf("Starting Aggregator API Service on port %s...\n", port)
-	if err := server.Run(":" + port); err != nil {
+	if err := srv.Run(":" + port); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
 }
