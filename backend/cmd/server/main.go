@@ -3,20 +3,30 @@ package main
 import (
 	"log"
 
+	"os"
+
 	"github.com/fossology/report-aggregator/internal/api"
 	"github.com/fossology/report-aggregator/internal/db"
 )
 
 func main() {
-	database, err := db.InitDB("aggregator.db")
+	dbPath := os.Getenv("DB_PATH")
+	if dbPath == "" {
+		dbPath = "aggregator.db"
+	}
+
+	database, err := db.InitDB(dbPath)
 	if err != nil {
 		log.Fatalf("Failed to initialize database: %v", err)
 	}
 
-	server := api.NewServer(database)
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
 
-	log.Println("Starting Aggregator API Service (localhost:8080)...")
-	if err := server.Run(":8080"); err != nil {
+	log.Printf("Starting Aggregator API Service on port %s...\n", port)
+	if err := server.Run(":" + port); err != nil {
 		log.Fatalf("Failed to start server: %v", err)
 	}
 }
