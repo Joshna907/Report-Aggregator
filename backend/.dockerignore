@@ -1,0 +1,10 @@
+.git
+.gitignore
+report-aggregator
+aggregator.db
+aggregator.db-journal
+Dockerfile
+docker-compose.yml
+testdata/
+*.exe
+frontend/

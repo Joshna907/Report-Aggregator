@@ -1,0 +1,69 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.4",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2024-01-15T10:00:00Z",
+    "tools": [
+      {
+        "name": "test-scanner",
+        "version": "2.0"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "name": "lodash",
+      "version": "4.17.21",
+      "description": "Lodash modular utilities",
+      "purl": "pkg:npm/lodash@4.17.21",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "abc123def456"
+        }
+      ],
+      "copyright": "Copyright JS Foundation and other contributors",
+      "supplier": {
+        "name": "Lodash Team"
+      }
+    },
+    {
+      "type": "library",
+      "name": "axios",
+      "version": "1.6.0",
+      "description": "Promise based HTTP client",
+      "purl": "pkg:npm/axios@1.6.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "copyright": "Copyright (c) 2014-present Matt Zabriskie"
+    },
+    {
+      "type": "library",
+      "name": "react",
+      "version": "18.2.0",
+      "purl": "pkg:npm/react@18.2.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "copyright": "Copyright (c) Meta Platforms, Inc."
+    }
+  ]
+}
