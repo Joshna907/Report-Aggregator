@@ -10,7 +10,7 @@ export default function HelpPage() {
         <div className="inline-flex p-3 bg-blue-50 rounded-full text-foss-blue mb-4">
             <HelpCircle size={48} />
         </div>
-        <h1 className="text-3xl font-bold text-gray-800">Support & Documentation</h1>
+        <h1 className="text-3xl font-bold text-gray-800">Support &amp; Documentation</h1>
         <p className="text-gray-500 mt-2">Everything you need to master the FOSSology Report Aggregator.</p>
       </div>
 
@@ -42,7 +42,7 @@ export default function HelpPage() {
       <div className="bg-blue-50 border border-blue-100 rounded-lg p-8 space-y-4">
         <h2 className="text-lg font-bold text-blue-900 flex items-center gap-2">
             <MessageSquare size={20} />
-            Community & GSoC 2024
+            Community &amp; GSoC 2024
         </h2>
         <p className="text-sm text-blue-800 leading-relaxed">
             This project is part of the FOSSology ecosystem. If you are a GSoC contributor or a security professional using this for compliance, we value your feedback! Join our community channels to discuss <strong>SPDX 3.0</strong> support and future <strong>VEX</strong> integration.

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Lock, User, Shield } from "lucide-react";
 
-export default function LoginPage() {
+export default function Page() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
@@ -99,7 +99,7 @@ export default function LoginPage() {
       </div>
 
       <div className="mt-8 text-xs text-gray-400">
-        &copy; 2026 Internal FOSSology & SW360 Aggregation Hub
+        &copy; 2026 Internal FOSSology &amp; SW360 Aggregation Hub
       </div>
 
     </div>
